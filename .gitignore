@@ -32,3 +32,6 @@ yarn.lock
 yarn-error.log
 
 scripts/twitter-token/accounts.*
+*_local.sh
+*.log
+logs/*.log
