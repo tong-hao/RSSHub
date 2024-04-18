@@ -6,7 +6,7 @@ import iconv from 'iconv-lite';
 
 export const route: Route = {
     path: '/:category?',
-    categories: ['level-1', 'level-2'],
+    categories: ['level-1', 'level-2', 'level-3'],
     example: '/newsinlevels/level-1',
     parameters: {},
     features: {
@@ -63,7 +63,7 @@ async function handler(ctx) {
     );
 
     return {
-        title: 'newsinlevels-${category}',
+        title: `newsinlevels-${category}`,
         link: currentUrl,
         description: 'Latest news articles from News in Levels',
         item: items,
