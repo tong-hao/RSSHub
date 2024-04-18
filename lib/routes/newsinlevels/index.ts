@@ -24,6 +24,10 @@ export const route: Route = {
     url: 'newsinlevels.com',
 };
 
+function filter(text) {
+    return text.replaceAll(/[^\u0009\u000A\u000D\u0020-\uD7FF\uE000-\uFDCF\uFDE0-\uFFFD]/gm, '');
+}
+
 async function handler(ctx) {
     const category = ctx.req.param('category') ?? 'level-1';
     const currentUrl = `https://www.newsinlevels.com/level/${category}/`;
@@ -55,8 +59,8 @@ async function handler(ctx) {
                 const res = await got({ method: 'get', url: item.link });
                 const content = load(iconv.decode(res.data, 'UTF-8'));
                 const post = content('#nContent');
-                item.title = String(item.title);
-                item.description = `${post.html()}<hr>`;
+                item.title = filter(item.title);
+                item.description = filter(post.html());
                 return item;
             })
         )
