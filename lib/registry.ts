@@ -11,7 +11,7 @@ import robotstxt from '@/routes/robots.txt';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let modules: Record<string, { route: Route } | { namespace: Namespace }> = {};
-let namespaces: Record<
+const namespaces: Record<
     string,
     Namespace & {
         routes: Record<
@@ -26,8 +26,13 @@ let namespaces: Record<
 switch (process.env.NODE_ENV) {
     case 'test':
     case 'production':
+        modules = directoryImport({
+            targetDirectoryPath: path.join(__dirname, './routes'),
+            importPattern: /\.ts$/,
+        }) as typeof modules;
+
         // @ts-expect-error
-        namespaces = await import('../assets/build/routes.json');
+        // namespaces = await import('../assets/build/routes.json');
         break;
     default:
         modules = directoryImport({
