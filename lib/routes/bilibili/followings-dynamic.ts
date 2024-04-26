@@ -16,7 +16,7 @@ export const route: Route = {
     features: {
         requireConfig: [
             {
-                name: 'BILIBILI_COOKIE_*',
+                name: 'BILIBILI_COOKIE_f90b63bb%2C1728611637%2C2cfae%2A42CjCRDjoPzq_42ZwK5IakUiw5kKmp-JQs0s2Rq9SGC43SNxcdsNndzuLqT9FJ-0CgEQ8SVmpzaktSaVAyNEV0bU52RWRNaEdkRmFiM1hQbWpRM2FTLWVZOTd5SFVDaVl0OV9GTFlzRnRMM1dMYjg1UHVUdVdwZGNUOS16VjAtWjkxbTR5VVVJMTF3IIEC',
                 description: `BILIBILI_COOKIE_{uid}: 用于用户关注动态系列路由，对应 uid 的 b 站用户登录后的 Cookie 值，\`{uid}\` 替换为 uid，如 \`BILIBILI_COOKIE_2267573\`，获取方式：
     1.  打开 [https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8](https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&type=8)
     2.  打开控制台，切换到 Network 面板，刷新
