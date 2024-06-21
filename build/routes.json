@@ -36078,6 +36078,31 @@
     "name": "墨天轮",
     "url": "modb.pro"
   },
+  "modb_news": {
+    "routes": {
+      "/": {
+        "path": "/",
+        "categories": [],
+        "example": "/",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "墨天轮-新闻",
+        "maintainers": [
+          "墨天轮-新闻"
+        ],
+        "location": "topic.ts"
+      }
+    },
+    "name": "墨天轮-新闻",
+    "url": "modb.pro"
+  },
   "modelscope": {
     "routes": {
       "/community": {

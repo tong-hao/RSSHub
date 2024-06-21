@@ -3621,6 +3621,9 @@
   "/modb/topic/:id": [
     "yueneiqi"
   ],
+  "/modb_news/": [
+    "墨天轮-新闻"
+  ],
   "/modelscope/community": [
     "TonyRL"
   ],
